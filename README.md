@@ -1,0 +1,2 @@
+# kodluyoruzorg
+SQL Temelleri Ödevleri
