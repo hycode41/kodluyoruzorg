@@ -1,0 +1,31 @@
+SELECT COUNT(length) FROM film
+WHERE length > ANY
+(
+SELECT length FROM film
+WHERE length > 115
+);
+
+
+
+SELECT COUNT(rental_rate) FROM film
+WHERE rental_rate > ALL
+(
+SELECT rental_rate FROM film
+WHERE rental_rate = 4.99
+);
+
+
+SELECT MIN(rental_rate), MIN(replacement_cost) FROM film
+WHERE film_id > 1;
+(
+SELECT title,rental_rate, replacement_cost FROM film
+WHERE (rental_rate = 0.99) AND (replacement_cost = 9.99)
+);
+
+
+SELECT MAX(amount) FROM payment
+WHERE customer_id > 0;
+(
+SELECT customer_id FROM payment
+WHERE amount = 11.99
+);
