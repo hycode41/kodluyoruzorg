@@ -1,0 +1,3 @@
+SELECT * FROM film MAX(length) WHERE title LIKE '%n' LIMIT 5
+SELECT * FROM film MIN(length) WHERE title LIKE '%n' OFFSET 5 LIMIT 5
+SELECT last_name, store_id FROM customer GROUP BY last_name, store_idORDER BY last_name DESC LIMIT 4
